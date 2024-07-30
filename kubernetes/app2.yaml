@@ -51,7 +51,7 @@ spec:
   - host: apptesting.csmpl.com
     http:
       paths:
-      - path: /
+      - path: /new
         pathType: Prefix
         backend:
           service:
