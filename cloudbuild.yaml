@@ -22,12 +22,12 @@ steps:
   id: 'Push Docker Image2'
 
 
-- name: 'google/cloud-sdk:latest'
-  entrypoint: 'sh'
-  args:
-  - -xe
-  - -c
-  - |
+#- name: 'google/cloud-sdk:latest'
+# entrypoint: 'sh'
+# args:
+# - -xe
+# - -c
+# - |
     gcloud deploy apply --file deploy/pipeline.yaml --region=us-central1-c
     gcloud deploy apply --file deploy/dev.yaml --region=us-central1-c
     gcloud deploy releases create 'app-release-${SHORT_SHA}' --delivery-pipeline=gke-cicd-pipeline --region=us-central1-c --skaffold-file=skaffold.yaml
