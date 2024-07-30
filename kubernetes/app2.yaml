@@ -16,7 +16,7 @@ spec:
         - name: flask-container
           image: us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/flask-image
           ports:
-            - containerPort: 8081
+            - containerPort: 80
 
 ---
 
@@ -29,6 +29,6 @@ spec:
     app: flask-app
   ports:
     - protocol: TCP
-      port: 8081
-      targetPort: 8081
+      port: 80
+      targetPort: 80
   type: LoadBalancer
