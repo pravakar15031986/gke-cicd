@@ -55,7 +55,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: oracle-service
+            name: flask-service
             port:
               number: 80
 ---
