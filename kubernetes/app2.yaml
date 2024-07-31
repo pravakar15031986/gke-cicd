@@ -31,31 +31,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: ClusterIP
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: flask-app-nginx
-  namespace: default
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-spec:
-  ingressClassName: nginx
-  tls:
-  - hosts:
-    - apptesting.csmpl.com
-    secretName: my-app-tls
-  rules:
-  - host: apptesting.csmpl.com
-    http:
-      paths:
-      - path: /new
-        pathType: Prefix
-        backend:
-          service:
-            name: flask-service
-            port:
-              number: 80
+  type: LoadBalancer
 ---
