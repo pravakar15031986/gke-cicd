@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flask-container
-          image: us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/flask-image
+          image: us-central1-docker.pkg.dev/jenkins-424713/gkeimage/flask-image
           ports:
             - containerPort: 80
 
