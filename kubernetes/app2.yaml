@@ -44,10 +44,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - gketesting.csmpl.com
+    - gkename.csmpl.com
     secretName: my-app-tls
   rules:
-  - host: gketesting.csmpl.com
+  - host: gkename.csmpl.com
     http:
       paths:
       - path: /new
