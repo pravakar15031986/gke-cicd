@@ -6,5 +6,5 @@ metadata:
   labels: {}
 description: dev
 gke:
-  cluster: projects/upbeat-aura-419104/locations/us-central1-c/clusters/pravakar
+  cluster: projects/jenkins-424713/locations/us-central1-c/clusters/gcpproject
 
