@@ -1,24 +1,24 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/quickstart-image', './app1' ]
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/jenkins-424713/gkeimage/quickstart-image', './app1' ]
   id: 'Build Docker Image'
 
   # images:
   # - 'us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/quickstart-image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/quickstart-image' ]
+  args: ['push', 'us-central1-docker.pkg.dev/jenkins-424713/gkeimage/quickstart-image' ]
   id: 'Push Docker Image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/flask-image', './app2' ]
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/jenkins-424713/gkeimage/flask-image', './app2' ]
   id: 'Build Docker Image2'
 
   # images:
   # - 'us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/quickstart-image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/flask-image' ]
+  args: ['push', 'us-central1-docker.pkg.dev/jenkins-424713/gkeimage/flask-image' ]
   id: 'Push Docker Image2'
 
 - name: 'google/cloud-sdk:latest'
