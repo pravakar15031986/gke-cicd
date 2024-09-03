@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flask-container
-          image: us-central1-docker.pkg.dev/jenkins-424713/gkeimage/flask-image
+          image: us-central1-docker.pkg.dev/upbeat-aura-419104/gke-image/flask-image
           ports:
             - containerPort: 80
 
@@ -44,13 +44,13 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - gkename.csmpl.com
+    - gketesting.csmpl.com
     secretName: my-app-tls
   rules:
-  - host: gkename.csmpl.com
+  - host: gketesting.csmpl.com
     http:
       paths:
-      - path: /path
+      - path: /
         pathType: Prefix
         backend:
           service:
